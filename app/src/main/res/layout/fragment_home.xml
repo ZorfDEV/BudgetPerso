@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<View
+    android:id="@+id/viewHeaderBack"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_125sdp"
+    android:background="@drawable/header_view_backg"/>
+
+       <!-- Texview TTcpt-->
+    <TextView
+        android:id="@+id/textViewHome"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:text="@string/ttcpt"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginRight="@dimen/_50sdp"/>
+    <!-- CardView -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:elevation="4dp"
+        android:padding="16dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:background="@color/green_800"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <!-- Contenu de la CardView -->
+        <LinearLayout
+            android:id="@+id/lyt_expand_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_800"
+            android:orientation="vertical">
+            <!-- revenus line -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Première vue avec une image -->
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bacg_icon">
+                    <ImageView
+                        android:id="@+id/img_cptcourant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_revenus_down"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/logob"
+                        android:scaleType="centerCrop" />
+                </FrameLayout>
+
+                <!-- Revenu -->
+                <TextView
+                    android:id="@+id/text_dep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:text="@string/revenus"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Montant revenus -->
+                <TextView
+                    android:id="@+id/mt_revenus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:text="250000000"
+                    android:textColor="@color/Amber700"
+                    android:textSize="16sp" />
+                <!-- Montant devise -->
+                <TextView
+                    android:id="@+id/devise_rev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FCFA"
+                    android:textColor="@color/Amber700"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp" />
+
+            </LinearLayout>
+
+            <!-- depense line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical">
+
+                <!-- Première vue avec une image -->
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bacg_icon">
+                    <ImageView
+                        android:id="@+id/img_depense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_depense_up"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/logob"
+                        android:scaleType="centerCrop" />
+                </FrameLayout>
+
+                <!-- Deuxième vue avec texte -->
+                <TextView
+                    android:id="@+id/textdep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/depenses"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="25dp" />
+
+                <!-- Montant depense -->
+                <TextView
+                    android:id="@+id/mt_depenses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:text="250000000"
+                    android:textColor="@color/Amber700"
+                    android:textSize="16sp" />
+                <!-- Montant devise dep -->
+                <TextView
+                    android:id="@+id/devise_dep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FCFA"
+                    android:textColor="@color/Amber700"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_100" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/gestCptButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/g_rer_les_comptes"
+                    android:textAllCaps="false"
+                    android:drawableLeft="@drawable/ic_compte"
+                    android:drawableTint="@android:color/white"
+                    android:drawablePadding="20dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:background="@drawable/btn_gere_cpt"
+                    android:gravity="center"/>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- CardView2 -->
+    <!-- LinearLayout avec FloatingActionButton -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/_200sdp"
+        android:layout_marginTop="445dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabTransfere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/transfert"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:fabSize="mini"
+            app:rippleColor="@android:color/white"
+            app:srcCompat="@drawable/ic_swap_horizontal_circle_24" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabRevenus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="@string/revenus"
+            android:clickable="true"
+            android:focusable="true"
+            app:fabSize="mini"
+            app:rippleColor="@android:color/white"
+            app:srcCompat="@drawable/ic_sack_dollar" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAchat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/depenses"
+            app:fabSize="mini"
+            app:rippleColor="@android:color/white"
+            app:srcCompat="@drawable/ic_shopping" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:tint="@android:color/white"
+            app:fabSize="normal"
+            app:rippleColor="@android:color/white"
+            app:srcCompat="@drawable/ic_add_24" />
+
+    </LinearLayout>
+
+</RelativeLayout>

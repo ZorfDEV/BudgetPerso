@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- circle_shape.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="oval"
+    tools:ignore="ExtraText">
+    <solid android:color="#52CFF6" /> <!-- Couleur de fond du cercle -->
+    <size
+        android:width="30dp"
+        android:height="30dp" />
+</shape>

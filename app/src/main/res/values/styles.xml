@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">8sp</item> <!-- Taille de police souhaitée -->
+        <item name="android:textColor">@android:color/white</item> <!-- Couleur du texte souhaitée -->
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar</item>
+
+    </style>
+
+    <!-- res/values/styles.xml -->
+        <style name="MatButtonSourceCode" parent="Theme.AppCompat">
+            <!-- Couleur de fond verte -->
+            <item name="android:background">#00FF00</item>
+            <!-- Couleur du texte en blanc -->
+            <item name="android:textColor">#FFFFFF</item>
+            <!-- Bords arrondis à 25% -->
+            <item name="android:radius">25dp</item>
+        </style>
+
+    <style name="ButtonStyleGreen" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_gere_cpt</item>
+    </style>
+
+
+</resources>
